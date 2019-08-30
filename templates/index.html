@@ -3,25 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>QUIZ</title>
-</head>
-
-<body>
-
-<div>
-    <h1>技術科部 QUIZ</h1>
-    <form action="/question" method="POST">
-
-        <p>
-            問題{{ number }}<br>
-            {{ question }}
-        </p>
-
-        <input type="radio" name="1" value="0">{{ ans1 }}
-        <input type="radio" name="1" value="1">{{ ans2 }}
-
-        <input type="submit" name="answer" style="width: 150px;height: 40px">
-
-<style>
+  <style>
     body {
         background: #eeeeee;
         font-family: Meiryo, serif;
@@ -36,8 +18,26 @@
         margin: 30px auto;
     }
 </style>
-<p></p>
-<p></p>
+</head>
+
+<body>
+
+<div>
+    <h1>技術科部 QUIZ</h1>
+    <form action="/question" method="POST">
+
+        <p>
+            問題{{ number }}<br>
+            {{ question }}
+        </p>
+  <label id="ans_1">
+        <input type="radio" name="1" value="0">{{ ans1 }}
+  </label>
+      <label id="ans_2">
+        <input type="radio" name="1" value="1">{{ ans2 }}
+      </label>
+
+        <input type="submit" value="回答" name="answer" style="width: 150px;height: 40px">
 
 </form>
 
